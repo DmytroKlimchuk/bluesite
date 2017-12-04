@@ -1,0 +1,115 @@
+%btn-custom {
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  line-height: 1;
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+    @include trans(0.3s);
+  }
+
+  &[disabled] {
+    background-color: $p4l2;
+    border-color: $p4l2;
+    color: #fff;
+
+    &:hover {
+      background-color: $p4l2;
+      border-color: $p4l2;
+      color: #fff;
+    }
+  }
+}
+
+.button {
+  @extend %btn-custom;
+  @include font(13px, #fff, 500, $font2);
+  padding-top: 12px;
+  padding-bottom: 13px;
+  width: 150px;
+}
+
+.btn {
+  @extend %btn-custom;
+  @include font(14px, #fff, 500, $font2);
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.btn1, .button1 {
+  background-color: $p2;
+  border: 1px solid $p2;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $p2l1;
+    border-color: $p2l1;
+  }
+
+}
+
+.btn2, .button2, .btn3, .button3 {
+  background-color: $p1d1;
+  border: 1px solid $p1d1;
+
+  &:hover {
+    background-color: $p1l2;
+    border-color: $p1l2;
+  }
+
+}
+
+.btn4, .button4 {
+  background-color: #fff;
+  border: 1px solid $p2;
+  color: $p2;
+
+  &:hover {
+    background-color: $p2l1;
+    border-color: $p2l1;
+    color: #fff;
+  }
+}
+
+.btn5, .button5 {
+  background-color: #fff;
+  border: 1px solid $p1d1;
+  color: $p1d1;
+
+  &:hover {
+    background-color: $p1l2;
+    border-color: $p1l2;
+    color: #fff;
+  }
+}
+
+.btn1 {
+  width: 220px;
+}
+
+.btn2 {
+  width: 280px;
+}
+
+.btn3 {
+  width: 201px;
+}
+
+.btn4 {
+  width: 220px;
+}
+
+.btn5 {
+  width: 201px;
+}
+
+.button2 {
+  width: 170px;
+}

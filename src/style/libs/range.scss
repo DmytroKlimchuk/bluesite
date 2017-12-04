@@ -1,0 +1,78 @@
+.form-intro {
+
+  .input-field {
+
+    .form-label {
+      position: absolute;
+      transform: translateY(-100%);
+      display: inline-block;
+      @include font(13px, #fff, 500, $font2);
+      line-height: 1;
+      margin: 0;
+    }
+
+    .number {
+      font-size: 0;
+      display: block;
+
+      span {
+        display: inline-block;
+        border: 1px solid $p4l2;
+        position: absolute;
+        vertical-align: top;
+        text-align: center;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        top: 0px;
+
+        &::before {
+          content: "";
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:hover {
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .minus {
+        border-radius: 3px 0 0 3px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        left: -3px;
+        &::before {
+          @include sprite($s-minus);
+        }
+      }
+
+      .plus {
+        border-radius: 0 3px 3px 0;
+        right: -3px;
+        background-color: $input-bg;
+
+        &::before {
+          @include sprite($s-plus);
+        }
+      }
+
+      &__input {
+        padding-left: 50px;
+        padding-right: 50px;
+        border: 0;
+        outline: 0;
+        display: inline-block;
+        background-color: $input-bg;
+        border-top: 1px solid $p4l2;
+        border-bottom: 1px solid $p4l2;
+        width: 170px;
+        border-radius: 0;
+        text-align: center;
+      }
+
+    }
+
+  }
+}

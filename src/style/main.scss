@@ -1,24 +1,31 @@
+
 /* --- Libs styles ---*/
-@import "../../bower_components/materialize/dist/css/materialize.min.css";
-@import "../../bower_components/font-awesome/css/font-awesome.min.css";
+@import "font-awesome.css";
+@import "../../bower_components/materialize/dist/css/materialize.css";
+
 
 /* --- Global styles ---*/
 @import "partials/colors";
 @import "partials/variable";
+@import "partials/functions";
 @import "partials/mixins";
 @import "partials/sprite";
 @import "partials/fonts";
 @import "partials/taxonomie";
 @import "partials/scaffolding";
+@import "partials/forms";
+@import "partials/btn";
+@import "libs/range";
 
 
 /* --- temporary styles ---*/
-@import "outlines";  //
+@import "outlines";
 /* --- end temporary styles ---*/
 
 
 /* --- views styles ---*/
 @import "views/header";
+@import "views/index";
 @import "views/footer";
 /* --- end views styles ---*/
 

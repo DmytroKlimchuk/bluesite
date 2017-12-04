@@ -1,4 +1,84 @@
+html {
+  font-family: $font2;
+  font-size: $base-font;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
 body {
   max-width: 1920px;
   min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1 {
+  @include font(35px, $p4d3, 700, $font2);
+}
+
+h2 {
+  @include font(33px, $p4d2, 700, $font2);
+}
+
+h3 {
+  @include font(27px, $p4d3, 500, $font2);
+}
+
+h4 {
+  @include font(22px, $p4d3, 500, $font2);
+}
+
+h5 {
+  @include font(17px, $p4d3, 500, $font2);
+}
+
+h6 {
+  @include font(15px, $p4d3, 500, $font2);
+}
+
+p {
+  @include font(14px, $p4d1, 400, $font2);
+  line-height: 1.57;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.subtitle {
+  @include font(20px, $p4d1, 500, $font2);
+  line-height: 1.5;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    @include font(15px, $p4d2, 400, $font2);
+    line-height: 1.46;
+
+    &::before {
+      content: "\f058";
+      @include font(15px, $p1, 400, $font-awesome);
+      margin-right: 10px;
+    }
+  }
+}
+
+blockquote {
+  margin: 0;
+  padding-left: 34px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include font(17px, $p1d1, 400, $font2);
+  line-height: 1.76;
+  background-color: $p1l3;
+  border-left: 2px solid $p1;
 }

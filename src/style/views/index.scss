@@ -1,0 +1,337 @@
+.intro-wrapper {
+  background-color: $p1l3;
+  background-image: url('../img/city.png'),
+                    url('../img/cloud1.png'),
+                    url('../img/cloud.png');
+  background-repeat: repeat-x, no-repeat, no-repeat;
+  background-position: right bottom, 95% center, 65% 40px;
+}
+
+.intro {
+  padding-top: 135px;
+  padding-bottom: 13px;
+  position: relative;
+
+  &__title {
+    @include font(47px, $p1, 700, $font2);
+    letter-spacing: -0.94px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    position: relative;
+
+    &:after{
+      content: '';
+      display: block;
+      position: relative;
+      height: 1px;
+      background-color: $p4d2;
+      width: 70%;
+      opacity: 0.3;
+      z-index: 1;
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      height: 3px;
+      background-color: $p2;
+      width: 50px;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    p {
+      @include font(47px, $p4d2, 700, $font2);
+      letter-spacing: -0.94px;
+      line-height: 1.2;
+    }
+
+    b {
+      @include font(47px, $p1, 700, $font2);
+      letter-spacing: -0.94px;
+      line-height: 1.2;
+    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+
+    * {
+      @include font(20px, $p4, 400, $font2);
+      line-height: 1.5;
+    }
+  }
+
+  .order {
+    margin-bottom: 75px;
+  }
+
+  .girl{
+    position: relative;
+    z-index: 2;
+    background: url('../img/img_girl.png') no-repeat;
+    height: 459px;
+    min-width: 308px;
+  }
+
+}
+
+.form-intro {
+  z-index: 1;
+  width: inherit;
+  position: absolute;
+  bottom: -50px;
+  background-color: $p1;
+  padding: 35px 15px 11px;
+
+  .input-field {
+    margin: 0;
+    margin-right: 5px;
+    width: 170px;
+    display: inline-block;
+
+    label {
+      display: inline-block;
+      @include font(13px, #fff, 500, $font2);
+      line-height: 1;
+    }
+
+    .caret {
+      color: $p4l1;
+      bottom: 0px;
+      right: 5px;
+      z-index: 5;
+    }
+    .select-wrapper {
+      display: block;
+    }
+    .select-dropdown {
+      box-sizing: border-box;
+      display: block;
+      width: inherit;
+      border: 1px solid $p4l2;
+      background-color: $input-bg;
+      border-radius: 4px;
+      padding-left: 15px;
+      padding-right: 15px;
+      @include font(13px, $p4, 400, $font2);
+
+
+      li {
+        span {
+          @include font(13px, $p4, 400, $font2);
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &:not(.browser-default) {
+        width: 100%;
+      }
+
+    }
+
+    .dropdown-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .btn {
+      margin-top: -3px;
+    }
+
+  }
+}
+
+.welcome {
+  padding-top: 90px;
+  padding-bottom: 70px;
+
+  &__img {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    padding-top: 40px;
+    background-color: $p1l3;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      max-width: 284px;
+      height: auto;
+    }
+  }
+
+  h2 {
+    @include font(35px, $p4d3, 700, $font2);
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: $p4d1;
+  }
+}
+
+section label {
+  display: block;
+  @include font(15px, $p1d1, 400, $font2);
+  margin-bottom: 30px;
+}
+
+
+.advantages-wrapper {
+  background-color: $p1;
+  background-image: url('../img/advantages.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  -moz-background-size: contain;
+  padding-top: 55px;
+  padding-bottom: 90px;
+}
+
+.advantages {
+  text-align: center;
+
+
+  label {
+    color: #fff;
+  }
+
+  h2 {
+    @include font(33px, #fff, 500, $font2);
+    line-height: 1.2;
+    margin-bottom: 50px;
+  }
+
+  .place-order {
+    margin-top: 30px;
+  }
+}
+
+.advantage {
+  box-shadow: 0 4px 20px rgba(202, 202, 202, 0.25);
+  background-color: #fff;
+  padding: 150px 30px 40px;
+  position: relative;
+
+  &__title {
+    @include font(17px, $p4d3, 500, $font2);
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    color: $p4d1;
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    @include sprite($s-ellipse);
+    top: 40px;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 126px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+  }
+
+  &--prof:after {
+    @include sprite($s-a1);
+  }
+  &--time:after {
+    @include sprite($s-a2);
+  }
+  &--quality:after {
+    @include sprite($s-a3);
+  }
+}
+
+
+.how-it-works {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 90px;
+
+  h2 {
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+}
+
+.arrow {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 180px;
+    background-color: $border;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-right: 2px solid $border;
+    border-bottom: 2px solid $border;
+    transform: rotate(-45deg) translateX(100%) translateY(-50%);
+    top: 90px;
+    right: -3px;
+  }
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  padding-top: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &__name {
+    @include font(17px, $p4d3, 600, $font2);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include font(13px, $p4d1, 400, $font2);
+    line-height: 1.538;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+  }
+
+  &--n1:before {
+    @include sprite($s-step1);
+  }
+  &--n2:before {
+    @include sprite($s-step2);
+  }
+  &--n3:before {
+    @include sprite($s-step3);
+  }
+  &--n4:before {
+    @include sprite($s-step4);
+  }
+}

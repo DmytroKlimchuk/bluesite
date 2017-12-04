@@ -1,5 +1,5 @@
-//= ../../bower_components/jquery/dist/jquery.min.js
-//= ../../bower_components/materialize/dist/js/materialize.min.js
+//= ../../bower_components/jquery/dist/jquery.js
+//= ../../bower_components/materialize/dist/js/materialize.js
 
 /*
     Custom

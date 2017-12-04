@@ -57,6 +57,48 @@ $cyan: rgb(0,255,255);
 }
 // ------------------
 
+.color {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.p1 {background-color: $p1;}
+.p1d1 {background-color: $p1d1;}
+.p1d2 {background-color: $p1d2;}
+.p1d3 {background-color: $p1d3;}
+
+.p2 {background-color: $p2;}
+.p2d1 {background-color: $p2d1;}
+.p2d2 {background-color: $p2d2;}
+.p2d3 {background-color: $p2d3;}
+
+.p3 {background-color: $p3;}
+.p3d1 {background-color: $p3d1;}
+.p3d2 {background-color: $p3d2;}
+.p3d3 {background-color: $p3d3;}
+
+.p4 {background-color: $p4;}
+.p4d1 {background-color: $p4d1;}
+.p4d2 {background-color: $p4d2;}
+.p4d3 {background-color: $p4d3;}
+
+.p4l1 {background-color: $p4l1;}
+.p4l2 {background-color: $p4l2;}
+.p4l3 {background-color: $p4l3;}
+
+.p3l1 {background-color: $p3l1;}
+.p3l2 {background-color: $p3l2;}
+.p3l3 {background-color: $p3l3;}
+
+.p2l1 {background-color: $p2l1;}
+.p2l2 {background-color: $p2l2;}
+.p2l3 {background-color: $p2l3;}
+
+.p1l1 {background-color: $p1l1;}
+.p1l2 {background-color: $p1l2;}
+.p1l3 {background-color: $p1l3;}
 
 .help {
     @include outline($red);

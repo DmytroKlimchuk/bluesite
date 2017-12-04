@@ -1,8 +1,13 @@
-@mixin font($font-size:14px, $font-color:$colorTextPrimary, $font-weight:400, $font-family: $font-regular) {
+@mixin font($font-size:14px, $font-color:$p4d1, $font-weight:400, $font-family: $font2) {
+  //font-size: convertToRem($font-size);
   font-size: $font-size;
   color: $font-color;
   font-weight: $font-weight;
   font-family: $font-family;
+}
+
+@mixin trans($time) {
+  transition: all $time ease-in-out;
 }
 
 @mixin sprite-width($sprite) {
