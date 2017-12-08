@@ -336,3 +336,201 @@ section label {
     @include sprite($s-step4);
   }
 }
+
+.discounts-wrapper {
+  background-color: $p1;
+  background-image: url('../img/clouds.png'),
+                    url('../img/left_cloud.png'),
+                    url('../img/rocket.png'),
+                    url('../img/right_cloud.png');
+  background-repeat: no-repeat;
+  background-position: center bottom, 7% 94px, 14% 170px, 73% 75px;
+  padding-top: 50px;
+  padding-bottom: 280px;
+}
+
+.row--discount-wrapper {
+  position: relative;
+}
+
+.row--discount {
+  position: absolute;
+  top: -20px;
+}
+
+.discounts {
+  text-align: center;
+
+  label {
+    color: #fff;
+    margin-bottom: 26px;
+  }
+
+  h2 {
+    @include font(33px, #fff, 500, $font2);
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  .subtitle {
+    @include font(20px, #fff, 500, $font2);
+    line-height: 1.5;
+    margin-left: 19%;
+    margin-right: 19%;
+    padding-bottom: 80px;
+  }
+}
+
+.discount-table {
+  height: inherit;
+  width: 60%;
+  float: left;
+  padding: 50px 39px;
+  box-shadow: 0 4px 30px rgba(202, 202, 202, 0.55);
+  background-color: #ffffff;
+
+  &__cell {
+    float:left;
+    width: 50%;
+    border: 1px solid transparent;
+
+    &:nth-child(1) {
+      border-right: 1px solid $border2;
+      border-bottom: 1px solid $border2;
+      padding-bottom: 35px;
+      padding-top: 20px;
+    }
+    &:nth-child(2) {
+      border-bottom: 1px solid $border2;
+      padding-bottom: 35px;
+      padding-top: 20px;
+    }
+    &:nth-child(3) {
+      border-right: 1px solid $border2;
+      padding-top: 35px;
+      padding-bottom: 22px;
+    }
+    &:nth-child(4) {
+      padding-top: 35px;
+      padding-bottom: 22px;
+    }
+  }
+
+  &__value {
+    @include font(35px, $p2, 700, $font2);
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin: 0;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__hint {
+    @include font(14px, $p4d1, 400, $font2);
+    line-height: 1.57;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &__descr {
+    @include font(17px, $p1d1, 600, $font2);
+    margin: 0;
+  }
+}
+
+.discount-promo-wrapper {
+  height: inherit;
+  float: left;
+  width: 40%;
+  display: inline-block;
+  padding: 20px;
+  background-color: $p1;
+}
+
+.discount-promo {
+  position: relative;
+  border: 2px dashed $p1d1;
+  border-radius: 20px;
+  text-align: center;
+  padding: 26px;
+
+  &__title {
+    @include font(22px, #fff, 600, $font2);
+    line-height: 1.36;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+    margin-bottom: 30px;
+  }
+
+  &__box {
+    background-color: $p1d1;
+    border: 2px dashed #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 26px;
+    position: relative;
+    margin-bottom: 45px;
+
+    p {
+      margin: 0;
+
+      span {
+        display: block;
+        text-align: left;
+        @include font(24px, #fff, 500, $font2);
+        line-height: 1.67;
+        letter-spacing: -0.48px;
+      }
+      b {
+        text-align: center;
+        display: block;
+        @include font(62px, $p3, 700, $font2);
+         line-height: 0.95;
+        text-transform: uppercase;
+      }
+      i {
+        display: block;
+        @include font(14px, #fff, 500, $font2);
+        line-height: 1.57;
+        text-align: center;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 0;
+      transform: translateY(-50%);
+      @include sprite($s-scissors);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      @include sprite($s-stars);
+    }
+  }
+
+  &__hint {
+    @include font(18px, #fff, 500, $font1);
+    font-style: italic;
+    line-height: 1.28;
+    letter-spacing: 0.18px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 110px;
+    height: 157px;
+    background-image: url(../img/balloon.png);
+    transform: translateX(50%);
+    bottom: 0;
+    right: 0;
+  }
+}
