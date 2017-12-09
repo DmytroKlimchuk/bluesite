@@ -1,0 +1,148 @@
+.footer {
+  padding-top: 18px;
+  padding-bottom: 45px;
+  background-color: $p1;
+}
+
+.top-footer {
+  border-bottom: 1px solid $border3;
+}
+
+.footer-nav {
+  padding: 0;
+  padding-top: 20px;
+  margin: 0;
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-between;
+
+  &:before {
+    display: none;
+  }
+
+  &__link {
+    @include font(12px, #fff, 500, $font2);
+    line-height: 1.34;
+    text-transform: uppercase;
+    letter-spacing: 0.24px;
+    text-decoration: none;
+  }
+}
+
+.middle-footer {
+  border-bottom: 1px solid $border3;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.footer-links {
+
+  &__title {
+    @include font(16px, #fff, 500, $font2);
+    margin-bottom: 30px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    :before {
+      display: none;
+    }
+
+    li {
+      margin-bottom: 14px;
+    }
+
+    a{
+      display: inline-block;
+      text-decoration: none;
+      @include font(13px, #fff, 400, $font2);
+      line-height: 1.2;
+    }
+  }
+}
+
+.bottom-footer {
+  padding-top: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copiright {
+
+  p {
+    @include font(13px, #fff, 500, $font3);
+    line-height: 1.61;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    @include font(13px, #fff, 500, $font3);
+    line-height: 1.61;
+  }
+}
+
+.social {
+
+  a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    text-align: center;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .fa {
+      color: #fff;
+      line-height: 32px;
+    }
+  }
+}
+
+.link-us {
+  position: relative;
+  padding-left: 50px;
+
+  &--tel {
+    &:before {
+      content: '';
+      position: absolute;
+      @include sprite($s-tel);
+      left: 0;
+      top: 0;
+    }
+  }
+  &--email {
+    &:before {
+      content: '';
+      position: absolute;
+      @include sprite($s-mail);
+      left: 0;
+      top: 0;
+    }
+  }
+
+  p {
+    @include font(13px, #fff, 500, $font2);
+    line-height: 1.23;
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    @include font(13px, #fff, 500, $font2);
+    line-height: 1.23;
+  }
+
+  &__tel {
+    @include font(16px, #fff, 700, $font2);
+    line-height: 1.23;
+    text-transform: uppercase;
+  }
+}
