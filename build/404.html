@@ -1,3 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Frontend</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        $(document).ready(function(){
+
+            $('.slider').slick();
+
+        });
+    </script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col s7 m5 xl3">
+                <a href="/" class="logo">
+                    <img src="img/logo.png" alt="BlueSite" width="284" height="62">
+                </a>
+            </div>
+            <div class="col s5 m7 xl9 nav-wraper">
+                <div class="nav">
+                    <ul class="list">
+                        <li class="list__item list__item--parent">
+                            <a class="list__link" href="#">Services</a>
+                            <ul class="list-child">
+                                <li class="list-child__item">
+                                    <a class="list-child__link" href="#">Service 1</a>
+                                </li>
+                                <li class="list-child__item">
+                                    <a class="list-child__link" href="#">Service 2</a>
+                                </li>
+                                <li class="list-child__item">
+                                    <a class="list-child__link" href="#">Service 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list__item list__item--parent">
+                            <a class="list__link" href="#">About Us</a>
+                            <ul class="list-child">
+                                <li class="list-child__item">
+                                    <a class="list-child__link" href="#">Service 1</a>
+                                </li>
+                                <li class="list-child__item">
+                                    <a class="list-child__link" href="#">Service 2</a>
+                                </li>
+                                <li class="list-child__item">
+                                    <a class="list-child__link" href="#">Service 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list__item">
+                            <a class="list__link" href="#">How it works</a>
+                        </li>
+                    </ul>
+
+                    <a class="hide-on-med-and-down call" href="tel:38067123456"><i class="fa fa-phone"></i></a>
+                    <a href="#" class="hide-on-small-only btn-sign button button1 waves-effect">Sign in</a>
+                    <a href="#" class="hide-on-small-only btn-order button button3 waves-effect">Order</a>
+                    <a class="btn_menu button-collapse" data-activates="slide-out"><i class="material-icons">menu</i></a>
+
+                    <ul id="slide-out" class="side-nav">
+                        <li><div class="user-view">
+                            <div class="background">
+                                <img src="img/office.jpg">
+                            </div>
+                            <a href="#!user"><img class="circle" src="img/profile.jpg"></a>
+                            <a href="#!name"><span class="white-text name">Dmytro Klimchuk</span></a>
+                            <a href="#!email"><span class="white-text email">Dmytro.Klimchuk@gmail.com</span></a>
+                        </div></li>
+
+                        <li><a href="#" class="waves-effect">Home</a></li>
+                        <li><a href="#" class="waves-effect">Services</a></li>
+                        <li><a href="#" class="waves-effect">About Us</a></li>
+                        <li><a href="#" class="waves-effect">Order now </a></li>
+                        <li><a href="#" class="waves-effect">How it works </a></li>
+                        <li><a href="#" class="waves-effect">Disclaimer</a></li>
+                        <li><a href="#" class="waves-effect">Why Us</a></li>
+                        <li><a href="#" class="waves-effect">Contacts</a></li>
+                        <li><a href="#" class="waves-effect">Blog</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+</header>
+
+<div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="breadcrumbs">
+            <p class="breadcrumbs__title">404 Error</p>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li>
+                    <a href="">Pages</a>
+                </li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li>
+                    <a class="active" href="/404.html">404 Error</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="not-found-wrapper">
+    <div class="container">
+        <div class="not-found">
+            <div class="row">
+                <div class="col s12 m8 offset-m2 l6 offset-l6">
+                    <div class="not-found__body">
+                        <h2>404 Page</h2>
+                        <p>Oops. The page you were looking for doesn’t exist</p>
+                        <small>You may have mistyped the address or the page may have moved</small>
+                        <a class="button button4" href="/">Home</a>
+                        <a class="button button5" href="#">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <footer class="footer">
     <div class="container">
         <div class="top-footer">
@@ -193,3 +333,6 @@
     </div>
 
 </footer>
+<script src="js/main.js"></script>
+</body>
+</html>

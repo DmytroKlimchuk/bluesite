@@ -2,6 +2,12 @@ console.log("common.js");
 
 $(document).ready(function() {
     $('select').material_select();
+    // Initialize collapse button
+
+
+    $(".button-collapse").sideNav();
+
+
 });
 
 /**********************  number  ****************************/
@@ -20,3 +26,11 @@ $('.plus').click(function () {
     return false;
 });
 /**********************end  number  ****************************/
+
+$(document).ready(function(){
+
+    var slider = $('.slider');
+    slider.bxSlider();
+
+});
+

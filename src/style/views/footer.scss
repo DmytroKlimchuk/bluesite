@@ -6,6 +6,7 @@
 
 .top-footer {
   border-bottom: 1px solid $border3;
+  display: none;
 }
 
 .footer-nav {
@@ -30,6 +31,7 @@
 }
 
 .middle-footer {
+  display: none;
   border-bottom: 1px solid $border3;
   padding-top: 40px;
   padding-bottom: 20px;
@@ -67,6 +69,7 @@
   padding-top: 44px;
   display: flex;
   justify-content: space-between;
+
 }
 
 .copiright {
@@ -94,6 +97,11 @@
     text-align: center;
     margin-right: 10px;
 
+    &:hover {
+      background-color: $p1d1;
+      border: 1px solid $p1d1;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -103,6 +111,9 @@
       line-height: 32px;
     }
   }
+
+
+
 }
 
 .link-us {
@@ -144,5 +155,43 @@
     @include font(16px, #fff, 700, $font2);
     line-height: 1.23;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 1135px) {
+
+  .link-us {
+    padding-left: 35px;
+  }
+
+  .link-us__tel {
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: $lg-width) {
+  .top-footer, .middle-footer  {
+    display: block;
+  }
+}
+
+@media (max-width: 870px) {
+  .link-us {
+    p {
+      display: none;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .bottom-footer {
+    padding-top: 0;
+    display: block;
+  }
+  .copiright {
+    text-align: center;
+  }
+  .footer {
+    padding-bottom: 18px;
   }
 }

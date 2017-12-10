@@ -4,4 +4,5 @@
 /*
     Custom
  */
+//= bxslider.js
 //= partials/helper.js

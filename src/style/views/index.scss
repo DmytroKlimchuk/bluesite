@@ -9,7 +9,7 @@
 }
 
 .intro {
-  padding-top: 135px;
+  padding-top: 50px;
   padding-bottom: 13px;
   position: relative;
 
@@ -69,11 +69,11 @@
   }
 
   .girl{
+    display: block;
     position: relative;
     z-index: 2;
-    background: url('../img/img_girl.png') no-repeat;
-    height: 459px;
-    min-width: 308px;
+    width: 100%;
+    height: auto;
   }
 
 }
@@ -81,16 +81,13 @@
 .form-intro {
   z-index: 1;
   width: inherit;
-  position: absolute;
-  bottom: -50px;
   background-color: $p1;
-  padding: 35px 15px 11px;
+  padding: 35px 0px 11px;
+
 
   .input-field {
     margin: 0;
-    margin-right: 5px;
-    width: 170px;
-    display: inline-block;
+    display: block;
 
     label {
       display: inline-block;
@@ -114,7 +111,7 @@
       border: 1px solid $p4l2;
       background-color: $input-bg;
       border-radius: 4px;
-      padding-left: 15px;
+      padding-left: 10px;
       padding-right: 15px;
       @include font(13px, $p4, 400, $font2);
 
@@ -361,6 +358,14 @@ section label {
   align-items: stretch;
 }
 
+.row--discount .col {
+  display: flex;
+  align-content: stretch;
+  height: inherit;
+  padding: 0;
+  margin: 0;
+}
+
 .discounts {
   text-align: center;
 
@@ -385,9 +390,8 @@ section label {
 }
 
 .discount-table {
+  width: 100%;
   height: inherit;
-  width: 60%;
-  float: left;
   padding: 50px 39px;
   box-shadow: 0 4px 30px rgba(202, 202, 202, 0.55);
   background-color: #ffffff;
@@ -442,11 +446,8 @@ section label {
     margin: 0;
   }
 }
-
 .discount-promo-wrapper {
   height: inherit;
-  float: left;
-  width: 40%;
   display: inline-block;
   padding: 20px;
   background-color: $p1;
@@ -524,6 +525,7 @@ section label {
     font-style: italic;
     line-height: 1.28;
     letter-spacing: 0.18px;
+    margin-right: 20px;
   }
 
   &:after {
@@ -542,24 +544,40 @@ section label {
   position: relative;
 
   .slider-prev, .slider-next {
-    font-size: 90px;
-    content: '';
+    display: block;
+    width: 25px;
+    height: 75px;
+    border: 1px solid red;
     position: absolute;
-    top: 50px;
-    font-weight: 200;
+    top: 0;
+    left: 0;
   }
   .slider-prev {
     left: 0;
+
+    &:before {
+      position: relative;
+      content: "\f104";
+      font-family: $font-awesome;
+      font-size: 62px;
+    }
   }
   .slider-next {
     right: 0;
 
+    &:before {
+      position: relative;
+      content: "\f105";
+      font-family: $font-awesome;
+      font-size: 62px;
+    }
   }
 }
 
 .testimonials {
   text-align: center;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .testimonial {
@@ -604,4 +622,146 @@ section label {
   time {
     @include font(13px, $p4l1, 300, $font2);
   }
+}
+
+.bx-pager {
+  display: none;
+}
+
+.testimonials-wrapper {
+  position: relative;
+}
+
+.bx-prev {
+  position: absolute;
+  z-index: 999;
+  left: 20px;
+  top: 70px;
+  @include sprite($s-left);
+}
+
+.bx-next {
+  position: absolute;
+  z-index: 999;
+  right: 20px;
+  top: 70px;
+  @include sprite($s-right);
+}
+
+
+@media (max-width: $md-width) {
+ section label {
+   text-align: center;
+ }
+  section h2 {
+   text-align: center;
+ }
+
+  .advantage {
+    margin-bottom: 20px;
+  }
+
+  .arrow:before {
+    display: none;
+  }
+  .arrow:after {
+    display: none;
+  }
+
+  .discount-promo__box p b {
+    font-size: 42px;
+  }
+  .discount-promo:after {
+    display: none;
+  }
+  .discount-promo__title {
+    font-size: 18px;
+  }
+  .discount-promo__box:after {
+    display: none;
+  }
+
+  .discounts-wrapper {
+    background-image: url(../img/clouds.png);
+    background-position: center bottom;
+  }
+
+  .row--discount {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .discount-promo-wrapper {
+    width: 100%;
+  }
+  .discounts-wrapper {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+
+
+@media (max-width: $only-mobile-width) {
+  .form-intro .input-field .btn {
+    margin-top: 10px;
+  }
+
+  .welcome h2, .advantages h2, .how-it-works h2 {
+    font-size: 28px;
+  }
+
+  .discounts .subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 80px;
+  }
+
+  .bx-prev {
+    left: 0;
+  }
+  .bx-next {
+    right: 0;
+  }
+
+  .testimonial__body p {
+    margin: 0 25px;
+  }
+
+  .testimonials {
+    margin-bottom: 0;
+  }
+
+}
+
+
+@media (min-width: $only-mobile-width) {
+
+  .intro {
+    padding-top: 135px;
+  }
+}
+
+@media (min-width: 993px) {
+
+  .intro {
+    padding-top: 135px;
+    padding-bottom: 40px;
+  }
+
+  .form-intro {
+    position: absolute;
+    bottom: -55px;
+  }
+
+}
+@media (min-width: 1201px) {
+
+  .intro {
+    padding-bottom: 1px;
+  }
+
 }

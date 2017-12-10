@@ -16,6 +16,7 @@
 @import "partials/forms";
 @import "partials/btn";
 @import "libs/range";
+@import "libs/side-nav";
 //@import "partials/animation";
 
 
@@ -26,8 +27,10 @@
 
 /* --- views styles ---*/
 @import "views/header";
+@import "views/breadcrumbs";
 @import "views/index";
 @import "views/footer";
+@import "views/404";
 /* --- end views styles ---*/
 
 
