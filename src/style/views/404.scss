@@ -1,0 +1,95 @@
+
+.not-found-wrapper {
+  padding-top: 180px;
+  padding-bottom: 60px;
+  background: url('../img/clouds2.png') no-repeat center 35px;
+}
+
+
+.not-found {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -90px;
+    margin-left: 10%;
+    width: 388px;
+    height: 326px;
+    background: url('../img/boat.png') no-repeat;
+  }
+
+  &__body {
+    text-align: center;
+
+    h2 {
+      @include font(60px, $p2, 700, $font2);
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    p {
+      @include font(20px, $p4d3, 500, $font2);
+      margin: 0;
+    }
+
+    small {
+      @include font(13px, $p4d3, 400, $font2);
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $lg-width) {
+
+
+  .not-found-wrapper {
+    padding-top: 120px;
+  }
+
+  .not-found {
+
+    &:before {
+
+      bottom: -90px;
+      margin-left: 0;
+      width: 388px;
+      left: 0px;
+      height: 326px;
+    }
+  }
+}
+
+@media (max-width: $md-width) {
+
+  .not-found-wrapper {
+    padding-top: 70px;
+  }
+
+  .not-found {
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $sm-width) {
+
+  .not-found-wrapper {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .not-found__body h2 {
+    font-size: 36px;
+    line-height: 1.2;
+
+  }
+
+  .button {
+    margin-bottom: 10px;
+  }
+
+}
