@@ -1,0 +1,93 @@
+.rightbar {
+
+}
+
+.search-box {
+  padding-bottom: 10px;
+}
+
+.search {
+  position: relative;
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding-right: 30px;
+    box-sizing: border-box !important;
+  }
+
+  &__btn {
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    right: 7px;
+    top: 0;
+    border: 0;
+    background-color: transparent;
+    text-align: center;
+
+    &:after {
+      display: inline-block;
+      content: "\f002";
+      font-family: $font-awesome;
+      color: $p4l1;
+      font-size: 1rem;
+    }
+  }
+
+}
+
+.block-list {
+  padding-top: 40px;
+
+  &__title {
+    @include font(15px, $p1d1, 600, $font2);
+    line-height: 1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    border-top: 1px solid $p1;
+
+    li {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+      background-color: $p1l3;
+      border-bottom: 1px solid $border;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .triangle {
+
+      li {
+        padding-left: 15px;
+
+        &:before {
+          position: relative;
+          content: "\f0da";
+          color: $p1;
+          font-family: $font-awesome;
+          font-size: 13px;
+          line-height: 1;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    a {
+      @include font(13px, $p4d2, 400, $font2);
+      line-height: 1;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+}
