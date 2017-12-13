@@ -1,3 +1,111 @@
 .page {
   padding-top: 50px;
 }
+
+.faq {
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+dl {
+
+  .dl {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: 2px solid $p1l3;
+    border-radius: 3px;
+    background-color: $p1l3;
+    cursor: pointer;
+    margin-bottom: 5px;
+
+    &.active dt{
+      &:before {
+        content: "\f056";
+      }
+    }
+  }
+
+  dt {
+    padding-left: 50px;
+    @include font(15px, $p4d1, 400, $font2);
+    line-height: 20px;
+    position: relative;
+
+    &:before {
+      content: "\f055";
+      position: absolute;
+      font-size: 1em;
+      font-family: $font-awesome;
+      color: $p1;
+      top: 0px;
+      left: 20px;
+    }
+  }
+
+  dd {
+    visibility: hidden;
+    opacity: 0;
+    padding: 0;
+    height: 0;
+    line-height: 1.57;
+    margin-left: 0;
+    transition: padding 0.5s linear;
+
+    * {
+      @include font(14px, $p4d1,400, $font2);
+      line-height: 1.57;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .dl.active  {
+    border: 2px solid $p1;
+    background-color: #fff;
+
+    dt {
+      color: $p1;
+    }
+  }
+
+  .dl.active dt + dd  {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    padding: 18px 30px 0px 50px;
+    text-align: justify;
+    @include font(14px, $p4d1,300, $font2);
+  }
+
+}
+
+
+@media (max-width: $md-width) {
+  .breadcrumbs-wrapper {
+    background-size: contain;
+    background-image: url(../img/city.png);
+    background-position: left bottom;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+
+@media (max-width: $sm-width) {
+  .breadcrumbs-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .breadcrumbs__title {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}

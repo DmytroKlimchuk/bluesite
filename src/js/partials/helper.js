@@ -27,6 +27,18 @@ $('.plus').click(function () {
 });
 /**********************end  number  ****************************/
 
+/**********************  faq  ****************************/
+$('dl .dl').click(function(){
+
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+    }else {
+        $(this).addClass('active');
+    }
+
+});
+/**********************end  faq  ****************************/
+
 $(document).ready(function(){
 
     var slider = $('.slider');
