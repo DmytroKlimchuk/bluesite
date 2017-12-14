@@ -39,6 +39,15 @@ $('dl .dl').click(function(){
 });
 /**********************end  faq  ****************************/
 
+/**********************end  how  ****************************/
+var h = 0;
+$('.how .step').each(function() {
+    var h1 = $(this).height();
+    if (h1 > h) h = h1;
+});
+$('.how .step').height(h);
+/**********************end  how  ****************************/
+
 $(document).ready(function(){
 
     var slider = $('.slider');
