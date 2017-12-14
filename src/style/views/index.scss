@@ -269,6 +269,7 @@ section label {
 
 .arrow {
   position: relative;
+  cursor: pointer;
 
   &:before {
     content: '';
