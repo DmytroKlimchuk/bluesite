@@ -1,0 +1,71 @@
+
+.blog-item {
+  margin-bottom: 50px;
+
+  &__title {
+    @include font(33px, $p4d2, 500, $font2);
+    margin-bottom: 10px;
+  }
+
+  time {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  .post-img {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  &__descr {
+    @include font(14px, $p4d1, 400, $font2);
+    line-height: 22px;
+  }
+
+  &__read {
+    @include font(14px, $p2 , 500, $font2);
+    line-height: 38px;
+    text-transform: uppercase;
+    letter-spacing: -0.08px;
+
+    .fa {
+      margin-left: 10px;
+    }
+  }
+  .social {
+    margin-bottom: 160px;
+  }
+
+  .social a {
+    display: block;
+    background-color: $p1d1;
+    margin-bottom: 10px;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+  }
+
+  .like a {
+    line-height: 42px;
+    margin-bottom: 10px;
+    display: block;
+    width: 42px;
+    height: 42px;
+    border: 1px solid $p1;
+    color: $p1;
+    border-radius: 50%;
+    position: relative;
+    padding-top: 7px;
+    text-align: center;
+
+    .fa {
+      display: block;
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translatex(-50%);
+      text-align: center;
+    }
+  }
+
+}
