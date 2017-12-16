@@ -1,0 +1,99 @@
+.post-img {
+  width: inherit;
+  margin-bottom: 30px;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.post {
+
+  &__footer {
+    margin-bottom: 35px;
+    border-bottom: 2px solid $p1;
+
+    time {
+      @include font (13px, $p4l1, 400, $font2);
+      line-height: 1.2;
+      letter-spacing: -0.08px;
+      margin-right: 20px;
+
+      .fa {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .social {
+    text-align: right;
+
+    &__link {
+      &:hover {
+        background-color: transparent;
+        border: 0;
+      }
+
+      .fa{
+        color: $p4l1;
+
+        &-facebook:hover {
+          color: $fb;
+        }
+        &-twitter:hover {
+          color: $tw;
+        }
+        &-pinterest-p:hover {
+          color: $pn;
+        }
+        &-google-plus:hover {
+          color: $g;
+        }
+      }
+    }
+  }
+
+}
+
+.like {
+  display: inline-block;
+
+  &__link {
+    @include font (13px, $p4l1, 400, $font3);
+    line-height: 1.2;
+    letter-spacing: -0.08px;
+    margin-right: 12px;
+
+    .fa {
+      margin-right: 5px;
+    }
+  }
+}
+
+.comment {
+  margin-top: 50px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    min-height: 130px;
+  }
+
+  .btn {
+    margin-bottom: 50px;
+  }
+
+}
+
+@media (max-width: $sm-width) {
+  .post .social {
+    text-align: center;
+  }
+  .post .post__info {
+    text-align: center;
+  }
+}

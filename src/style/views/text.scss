@@ -19,8 +19,14 @@
 
 }
 
-.article {
-  column-count: 2;
-  column-width: 50%;
-  column-gap: 30px;
+@media (max-width: $sm-width) {
+  .article {
+    column-count: 1;
+    column-width: 100%;
+    column-gap: 0px;
+  }
+
+  .post__info {
+    margin-bottom: 10px;
+  }
 }

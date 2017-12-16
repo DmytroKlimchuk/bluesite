@@ -1,11 +1,12 @@
 input[type="text"],
 input[type="password"],
 input[type="search"],
+input[type="email"],
 input[type="tel"],
 select {
-  background-color: $p4l3;
+  background-color: $input-bg;
   border-radius: 3px;
-  border: 1px solid $p4l2;
+  border: 1px solid $border4;
   @include  font(13px, $p4, 400, $font2);
   padding-top: 18px;
   padding-bottom: 17px;
@@ -57,5 +58,27 @@ select {
       font-size: 16px;
       color: $p2;
     }
+  }
+}
+
+textarea {
+  background-color: $input-bg;
+  border-radius: 3px;
+  border: 1px solid $border4;
+  @include  font(13px, $p4, 400, $font2);
+  padding: 10px;
+  width: inherit;
+}
+
+.field-group {
+  width: 100%;
+
+  input {
+    width: inherit;
+    display: block;
+  }
+
+  span {
+    @include  font(13px, $p4, 500, $font2);
   }
 }
