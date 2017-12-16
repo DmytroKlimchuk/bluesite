@@ -69,6 +69,17 @@ ul {
       margin-right: 10px;
     }
   }
+
+  &.check {
+
+    li {
+
+      &::before {
+        content: "\f046";
+        color: $p2;
+      }
+    }
+  }
 }
 
 blockquote {
@@ -77,8 +88,14 @@ blockquote {
   padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
-  @include font(17px, $p1d1, 400, $font2);
-  line-height: 1.76;
   background-color: $p1l3;
   border-left: 2px solid $p1;
+  margin-bottom: 1rem;
+
+  p {
+    @include font(17px, $p1d1, 400, $font2);
+    line-height: 1.76;
+    margin: 0;
+  }
 }
+
