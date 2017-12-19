@@ -158,7 +158,7 @@
 @media (max-width: $only-mobile-width) {
   .intro {
     .intro__title, .intro__title b, .intro__title p {
-      font-size: convertToRem(30px);
+      font-size: convertToRem(25px);
     }
     .intro__text p {
       font-size: convertToRem(14px);
