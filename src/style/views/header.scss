@@ -158,10 +158,10 @@
 @media (max-width: $only-mobile-width) {
   .intro {
     .intro__title, .intro__title b, .intro__title p {
-      font-size: 30px;
+      font-size: convertToRem(30px);
     }
     .intro__text p {
-      font-size: 14px;
+      font-size: convertToRem(14px);
     }
     .order {
       margin-bottom: 20px;

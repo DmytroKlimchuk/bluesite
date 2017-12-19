@@ -569,7 +569,7 @@ section label {
       position: relative;
       content: "\f104";
       font-family: $font-awesome;
-      font-size: 62px;
+      font-size: convertToRem(62px);
     }
   }
   .slider-next {
@@ -579,7 +579,7 @@ section label {
       position: relative;
       content: "\f105";
       font-family: $font-awesome;
-      font-size: 62px;
+      font-size: convertToRem(62px);
     }
   }
 }
@@ -624,7 +624,7 @@ section label {
 
   &__author {
     @include font(14px, $p1d1, 400, $font2);
-    font-size: 1.21;
+    line-height: 1.21;
     margin: 0;
     margin-bottom: 10px;
   }
@@ -660,15 +660,89 @@ section label {
 
 
 @media (max-width: $md-width) {
- section label {
-   text-align: center;
- }
-  section h2 {
-   text-align: center;
- }
+
+  .intro-wrapper {
+    background-color: $p1l3;
+    background-image: url('../img/city.png');
+    background-repeat: repeat-x;
+    background-position: right bottom;
+  }
+
+  .intro {
+    padding-top: 30px;
+
+    &__title {
+      @include font(30px, $p1, 700, $font2);
+      margin-bottom: 30px;
+
+      p {
+        font-size: inherit;
+      }
+      b {
+        font-size: inherit;
+      }
+    }
+
+    &__text p {
+      @include font(16px, $p4, 400, $font2);
+      line-height: 1.3;
+    }
+
+    .order {
+      width: 200px;
+      padding-top: 14px;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .form-intro .input-field {
+    padding-bottom: 10px;
+  }
+
+  .welcome {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__body {
+      padding-top: 20px;
+    }
+
+    h2 {
+      @include font(29px, $p4d3, 700, $font2);
+      margin-bottom: 20px;
+    }
+  }
+
+  .advantages-wrapper {
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+
+  .advantages {
+    h2 {
+      @include font(29px, #fff, 500, $font2);
+    }
+
+    .place-order {
+      margin-top: 0px;
+    }
+  }
+
+  section {
+    label {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+
 
   .advantage {
     margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .arrow:before {
@@ -678,25 +752,86 @@ section label {
     display: none;
   }
 
+  .how-it-works {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    h2 {
+      @include font(29px, $p4d3, 700, $font2);
+      margin-bottom: 30px;
+    }
+  }
+
+  .step {
+    padding-top: 0px;
+    padding-left: 90px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+
+    &__name {
+      @include font(16px, $p4d3, 600, $font2);
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      @include font(13px, $p4d1, 400, $font2);
+      text-align: left;
+    }
+
+    &:before {
+      transform: translateX(0) translateY(-50%);
+      top: 50%;
+      left: 0;
+    }
+  }
+  .discounts-wrapper {
+    background-image: none;
+    padding-top: 30px;
+  }
+
+  .discounts {
+    text-align: center;
+
+    label {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      @include font(29px, #fff, 500, $font2);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      @include font(16px, #fff, 500, $font2);
+      line-height: 1.2;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding-bottom: 40px;
+    }
+  }
+
+  .discount-table {
+    padding: 25px 15px;
+  }
+
   .discount-promo__box p b {
-    font-size: 42px;
+    font-size: convertToRem(42px);
   }
   .discount-promo:after {
     display: none;
   }
   .discount-promo__title {
-    font-size: 18px;
+    font-size: convertToRem(18px);
   }
   .discount-promo__box:after {
     display: none;
   }
-
-  .discounts-wrapper {
-    background-image: url(../img/clouds.png);
-    background-position: center bottom;
+  .discount-promo__hint {
+    margin-bottom: 0;
   }
-
-  .row--discount {
+ .row--discount {
     position: relative;
     display: flex;
     align-items: stretch;
@@ -709,6 +844,28 @@ section label {
     margin-bottom: 0;
     padding-bottom: 0;
   }
+
+  .bx-prev {
+    left: 00px;
+  }
+
+  .bx-next {
+    right: 0px;
+  }
+
+  .testimonials h2 {
+    @include font(29px, $p4d3, 700, $font2);
+    margin-bottom: 20px;
+  }
+
+  .testimonial__body p {
+    margin: 0 10%;
+  }
+
+  .link-us--tel {
+    margin-right: 15px;
+  }
+
 }
 
 
@@ -719,41 +876,76 @@ section label {
   }
 
   .welcome h2, .advantages h2, .how-it-works h2 {
-    font-size: 28px;
+    font-size: convertToRem(22px);
   }
 
   .discounts .subtitle {
-    font-size: 16px;
+    font-size: convertToRem(16px);
     line-height: 1.5;
     margin-left: 10px;
     margin-right: 10px;
     padding-bottom: 80px;
   }
+  .discount-promo__title {
+    margin: 15px;
+  }
+  .discount-promo, .discount-promo__box {
+    padding: 13px;
+  }
+  .discount-promo__box {
+    p{
+      text-align: center;
 
+      span {
+        text-align: center;
+      }
+    }
+  }
+  .discount-promo__title {
+    font-size: 1.2rem;
+  }
+  .discount-promo__box p b {
+    font-size: 2rem;
+  }
   .bx-prev {
-    left: 0;
+    left: 0px;
+    top: 150px;
   }
   .bx-next {
-    right: 0;
+    right: 0px;
+    top: 150px;
   }
 
-  .testimonial__body p {
-    margin: 0 25px;
+  .testimonial__body {
+    margin-bottom: 10px;
+
+    p {
+      margin: 0 30px;
+    }
   }
 
+  footer time {
+    margin-right: 0;
+  }
+
+  .testimonials-wrapper {
+    margin-bottom: 20px;
+  }
   .testimonials {
     margin-bottom: 0;
   }
 
-}
+  .order-btn-wrapper {
+    text-align: center;
 
-
-@media (min-width: $only-mobile-width) {
-
-  .intro {
-    padding-top: 135px;
+    .btn {
+      display: inline-block;
+      text-align: center;
+    }
   }
+
 }
+
 
 @media (min-width: 993px) {
 
@@ -773,7 +965,6 @@ section label {
   .intro {
     padding-bottom: 1px;
   }
-
 }
 
 @media (max-width: 1300px) {
@@ -781,5 +972,4 @@ section label {
   .rocket {
     display: none;
   }
-
 }

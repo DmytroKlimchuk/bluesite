@@ -1,6 +1,6 @@
 @mixin font($font-size:14px, $font-color:$p4d1, $font-weight:400, $font-family: $font2) {
-  //font-size: convertToRem($font-size);
-  font-size: $font-size;
+  font-size: convertToRem($font-size);
+  //font-size: $font-size;
   color: $font-color;
   font-weight: $font-weight;
   font-family: $font-family;
